@@ -37,7 +37,7 @@ def hinge_loss_single(feature_vector, label, theta, theta_0):
     margin = label * (np.dot(theta, feature_vector) + theta_0)
     loss = max(0, 1 - margin)
     return loss
-    raise NotImplementedError
+
 
 
 def hinge_loss_full(feature_matrix, labels, theta, theta_0):
@@ -190,7 +190,7 @@ def average_perceptron(feature_matrix, labels, T):
     avg_theta_0 = theta_0_sum / (n * T)
 
     return avg_theta, avg_theta_0
-    raise NotImplementedError
+
 
 
 def pegasos_single_step_update(
